@@ -9,8 +9,8 @@ void Container::addObject(Object *object)   //Task 1&3
         return;
     }
 
-    if (object->getSize().x + object->getPosition().x > this->getSize().x + this->getPosition().x
-    ||  object->getSize().y + object->getPosition().y > this->getSize().y + this->getPosition().y) {
+    if (object->getSize().x + object->getPosition().x > this->getSize().x
+    ||  object->getSize().y + object->getPosition().y > this->getSize().y) {
         cout << "The object " << object->getName() << " is too large and cannot be added to " << this->getName() << endl;
         return;
     }
