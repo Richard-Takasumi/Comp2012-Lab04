@@ -30,6 +30,6 @@ $(OBJ_DIR)/%.o: %.cpp
 $(OBJ_DIR_leak)/%.o: %.cpp
 	g++ $(CPPFLAGS_leak) -MMD -MP -c $< -o $@
 
-clean:;
+clean:
 	del $(OBJ_DIR)\* $(OBJ_DIR_leak)\* *.exe
 # 	rm -rf $(OBJ_DIR)/* $(OBJ_DIR_leak)/* *.exe
