@@ -8,6 +8,14 @@ const Pair Object::getSize() const
 
 const Pair Object::getPosition() const  //Task 2
 {
+    int x_pos = _position.x;
+    int y_pos = _position.y;
+    if (this->_parent != nullptr) {
+        x_pos += this->_parent->getPosition().x;
+        y_pos += this->_parent->getPosition().y;
+    }
+    Pair position{x_pos, y_pos};
+    return position;
 
 }
 
@@ -18,11 +26,15 @@ const char* Object::getName() const
 
 void Object::setSize(int x, int y)  //Task 3
 {
+    if (x > SCREEN_RESOLUTION.x || y > SCREEN_RESOLUTION.y) {
+        cout << "Invalid size of " << this->getName() << endl;
+    }
 
 }
 
 void Object::setPosition(int x, int y)  //Task 3
 {
+
 
 }
 

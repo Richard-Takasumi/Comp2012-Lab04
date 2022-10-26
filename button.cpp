@@ -34,7 +34,10 @@ void Button::buttonPressReleased()
 
 void Button::display() const // Task 1
 {
-
+    std::cout << "\nButton";
+    this->displayBasic();
+    cout << "\n\t\t";
+    cout << "ButtonText=[" << this->getText() << "]" << endl;
 }
 
 Button::Button()
